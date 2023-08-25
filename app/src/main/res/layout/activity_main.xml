@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|top"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@color/toolbar"
+                android:gravity="right"
+
+                android:orientation="horizontal"
+                android:paddingRight="4dp">
+
+                <Button
+                    android:id="@+id/btnLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đăng xuất"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:id="@+id/logedContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txtNameDisplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bệnh Nhân: "
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="4dp" />
+
+                <TextView
+                    android:id="@+id/txtIdentify"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CCCD:"
+                    android:textSize="18dp" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="4dp" />
+
+                <TextView
+                    android:id="@+id/txtAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tên đăng nhập:"
+                    android:textSize="18dp" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="4dp" />
+
+                <TextView
+                    android:id="@+id/txtUserId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mã bệnh nhân:"
+                    android:textSize="18dp" />
+
+                <Space
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp" />
+
+                <ImageView
+                    android:id="@+id/imgUserId"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp" />
+
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp" />
+
+                <LinearLayout
+                    android:id="@+id/containerTicket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="8dp" />
+
+                    <TextView
+                        android:id="@+id/ticketNumberText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mã Số:"
+                        android:textColor="#D32F2F"
+                        android:textSize="20dp" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="4dp" />
+
+                    <TextView
+                        android:id="@+id/txtRoom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Quày đăng ký: "
+                        android:textColor="#D32F2F"
+                        android:textSize="20dp" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="4dp" />
+
+                    <TextView
+                        android:id="@+id/txtDateApoiment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ngày khám: "
+                        android:textColor="#D32F2F"
+                        android:textSize="20dp" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="4dp" />
+
+
+                    <ImageView
+                        android:id="@+id/imgQRApoiment"
+                        android:layout_width="300dp"
+                        android:layout_height="300dp" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="8dp" />
+
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="8dp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/buttonCreateTicket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Tạo Lịch khám"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/container" />
+
+                <Button
+                    android:id="@+id/buttonTicketList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Xem chi tiếc lịch khám"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="4dp" />
+
+
+                <Button
+                    android:id="@+id/btnTurnSchedule"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tự đông tạo DS lúc 12h: Đang Tắt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/containerLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <EditText
+                    android:id="@+id/edtUseName"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:hint="Tên đăng nhập" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="4dp" />
+
+                <EditText
+                    android:id="@+id/edtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:hint="mật khẩu"
+                    android:inputType="textPassword" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="8dp" />
+
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Đăng nhập"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/container" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="8dp" />
+
+                <Button
+                    android:id="@+id/btnLoginGeticket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Đăng nhập và lấy số thứ tự"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/container" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/progress"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#40111111"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="#B00020" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
